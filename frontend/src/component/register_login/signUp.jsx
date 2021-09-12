@@ -13,24 +13,29 @@ const SignUp = (props) => {
         "phone": '',
     });
 
+    //로그인 페이지로 이동
     const goToLogin = () => {
         history.push({
             pathname: "/login"
         })
     }
 
+    //가입하기 버튼 누를 시 실행
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const arr = Object.entries(signUpdata);
+        const signUpArr = Object.entries(signUpdata);
 
         if(signUpdata) {
-            for(let i = 0; i< arr.length; i++) {
-                if(arr[i][1] === "") {
-                    return alert(`${arr[i][0]} 을(를) 입력해주세요.`);
+            
+            //입력안한 항목이 있는지 확인
+            for(let i = 0; i< signUpArr.length; i++) {
+                if(signUpArr[i][1] === "") {
+                    return alert(`${signUpArr[i][0]} 을(를) 입력해주세요.`);
                 }
             }
 
+            //전화번호 형식 확인
             for(let i=0; i<signUpdata.phone.length; i++){
                 if(signUpdata.phone.length !== 11 || Number.isInteger(parseInt(signUpdata.phone[i])) === false) {
                     setSignUpData({...signUpdata, "phone":''});

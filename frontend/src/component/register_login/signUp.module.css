@@ -19,6 +19,7 @@
 .title {
   font-size: 4em;
   color: skyblue;
+  padding: 2rem;
 }
 .form {
   width: 85%;
@@ -35,6 +36,7 @@
 .input {
   border: solid 1px skyblue;
   border-radius: 2px;
+  margin-bottom: 0.8rem;
   background-color: whitesmoke;
   height: 2rem;
   font-size: 1em;
@@ -48,6 +50,7 @@
 .submit {
   width: 100%;
   height: 2.5rem;
+  margin-top: 1.5rem;
   background-color: skyblue;
   color: whitesmoke;
   border: solid 1px skyblue;

@@ -60,7 +60,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
-] #script안에서의 리소스 요청을 허용할 도메인 추가
+]  # script안에서의 리소스 요청을 허용할 도메인 추가
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -74,8 +74,8 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[
-            os.path.join(BASE_DIR, 'frontend/build'), # 경로 변경
+        'DIRS': [
+            os.path.join(BASE_DIR, 'frontend/build'),  # 경로 변경
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-#경로 추가
+# 경로 추가
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend/build/static'),
 ]
