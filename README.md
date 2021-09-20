@@ -30,6 +30,7 @@
 - django 설치 : pip install django
 - django-rest-framework 설치 : pip install django-rest-framework
 - django-cors-headers 설치 : pip install django-cors-headers
+- pillow 설치 : python -m pip install Pillow
 
 ## 프로그램 실행
 
