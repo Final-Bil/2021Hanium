@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import { getCurrentUser } from '../../../util/getCurrentUser';
 import styles from './header_pop.module.css';
 
 const HeaderPop = ({toggleMenu}) => {
@@ -24,6 +25,13 @@ const HeaderPop = ({toggleMenu}) => {
             toggleMenu();
         };
     }
+
+    useEffect(() => {
+        console.log('header_pop is Mounted')
+        if(getCurrentUser()) {
+            console.log('로그인 되어있따')
+        }
+    })
 
     return (
 
