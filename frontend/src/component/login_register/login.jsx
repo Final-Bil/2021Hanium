@@ -73,7 +73,10 @@ const Login = (props) => {
             }
 
         })
-        .then(response => console.log(response))
+        .then(response => {
+            localStorage.setItem("ACCESS_TOKEN", response.data.token)
+            goToHome();
+        })
         .catch(error => console(error))
     }
 
